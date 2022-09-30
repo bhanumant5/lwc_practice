@@ -1,0 +1,31 @@
+SELECT Id, Name , Rating FROM Account OFFSET 5
+SELECT Id, Name, Rating FROM Account
+SELECT Id, Name, Rating FROM Account OFFSET 5
+SELECT Id, Name, Rating FROM Account OFFSET 25
+SELECT Id, Name, Rating FROM Account OFFSET 26
+SELECT Id, Name, Rating FROM Account LIMIT 1
+SELECT Id, Name, Rating FROM Account WHERE Name LIKE 'H%' LIMIT 10
+SELECT Id, Name, Rating FROM Account WHERE Name LIKE 'j%' LIMIT 10
+SELECT Id, Name, Rating FROM Account WHERE Name LIKE 'h' LIMIT 10
+SELECT Id, Name, Rating FROM Account WHERE Name LIKE'h'
+SELECT Id, Name, Rating FROM Account WHERE Rating = 'Hot' LIMIT 10
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='Hot' LIMIT 10
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='Hot' AND Industry ='Banking' LIMIT 10
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='Hot' AND Industry ='Banking' LIMIT 10 OFFSET 1
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='Hot' OR Industry ='Banking' LIMIT 10 OFFSET 1
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='Hot' OR Industry ='Banking' LIMIT 10 
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Rating='H%' OR Industry ='Banking' LIMIT 10 
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name= 'R%'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name= 'R_%'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE 'R'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE 'R%'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE 'R%'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE '%r'
+SELECT Id, Name, Rating, Phone, Industry FROM Account ORDER BY Name DESC
+SELECT Id, Name, Rating, Phone, Industry FROM Account ORDER BY Name ASC
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE 'R%' ORDER BY Name ASC
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Name LIKE 'R%' ORDER BY Name DESC
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Industry !='Banking'
+SELECT Id, Name, Rating, Phone, Industry FROM Account WHERE Industry ='Banking' OR Rating != 'Hot' AND Name LIKE 'h%'
+SELECT COUNT(id) from Account
+SELECT id, Name, Phone, Industry , ( SELECT  Name, Phone FROM Contacts) FROM Account

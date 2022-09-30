@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title=" Saving Account" class="card">
+        <lightning-input label="Name" type="text" ></lightning-input>
+        <lightning-input label="Phone" type="number" ></lightning-input>
+        <lightning-input label="Rating" type="picklist" ></lightning-input>
+        <lightning-input label="Email" type="email" ></lightning-input>
+        <lightning-input label="Industry" type="picklist" ></lightning-input>
+        <lightning-button label="Save" onclick={saveRecord} class="save"></lightning-button>
+        <lightning-button label="Clear" onclick={clearRecord} class="clear"></lightning-button>
+     
+    </lightning-card>
+</template>
